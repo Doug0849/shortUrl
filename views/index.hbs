@@ -6,7 +6,7 @@
     <p class="fs-4"><Strong>Success! Please use this link:</Strong></p>
     <p class="fs-2"><a href="/{{shortUrl}}">https://{{hostUrl}}{{shortUrl}}</a></p>
     <input type="text" style="display: none" value="https://{{hostUrl}}{{shortUrl}}" id="shortUrl">
-    <button onclick="return copyButton()">Copy</button>
+    <button class="btn btn-primary" onclick="return copyButton()">Copy</button>
   </div>
   {{else if noShortUrl}}
   <div class="container mt-3 d-flex flex-column justify-content-center align-items-center">
