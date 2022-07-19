@@ -1,0 +1,21 @@
+<div class="container d-flex flex-column justify-content-center align-items-center mt-5">
+  <h1 class="title text-center">URL Shortener</h1>
+  <img src="imgs/ExportedContentImage_00.png" style="width:10rem;" alt="" srcset="">
+  {{#if shortUrl}}
+  <div class="container mt-3 d-flex flex-column justify-content-center align-items-center">
+    <p class="fs-4"><Strong>Success! Please use this link:</Strong></p>
+    <p class="fs-2">{{hostUrl}}{{shortUrl}}</p>
+  </div>
+  {{else if noShortUrl}}
+  <div class="container mt-3 d-flex flex-column justify-content-center align-items-center">
+    <p class="fs-4"><Strong>Can't find the Short Url</Strong></p>
+  </div>
+  {{else}}
+  <form action="/url" method="POST">
+    <div class="form-container d-flex flex-column justify-content-center align-items-center mt-3">
+      <input type="text" class="form-control mt-3" id="url" name="url" placeholder="Input URL here" size="50">
+      <button class="btn btn-success mt-3  align-self-center" type="submit">Shorten</button>
+  </form>
+</div>
+{{/if}}
+</div>
